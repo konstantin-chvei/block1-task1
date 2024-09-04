@@ -5,36 +5,69 @@ int main()
 {
 	std::setlocale(LC_ALL, "ru-RU");
 
-	const int countOfSides = 3;
-	int arrayOfSides[countOfSides]{ 0 };
-
-	for (int i{ 0 }; i < countOfSides; i++)
+	int firstSide{ 0 }, secondSide{ 0 }, thirdSide{ 0 };
+	std::cout << "введите значение первой стороны треугольника не певышающее 13000000 " << std::endl;
+	bool firstChecking{ true };
+	while (firstChecking)
 	{
-		std::cout << "введите сторону треугольника под номером " << i + 1 << std::endl;
-		bool checking{ true };
-		while (checking)
+		std::cin >> firstSide;
+		if (std::cin.fail() || firstSide < 0 || firstSide >= 13000000)
 		{
-			std::cin >> arrayOfSides[i];
-			if (std::cin.fail())
-			{
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-				std::cout << "введено не корректное число, повторите ввод \n\n";
-			}
-			else
-			{
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-				checking = false;
-			}
+			std::cout << "введено не корректное число, повторите ввод \n\n";
+		}
+		else
+		{
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			firstChecking = false;
 		}
 	}
 
-	int firstSide{ arrayOfSides[0] * arrayOfSides[0] };
-	int secontSide{ arrayOfSides[1] * arrayOfSides[1] };
-	int thirdSide{ arrayOfSides[2] * arrayOfSides[2] };
+	std::cout << "введите значение второй стороны треугольника не певышающее 13000000 " << std::endl;
+	bool secondChecking{ true };
+	while (secondChecking)
+	{
+		std::cin >> secondSide;
+		if (std::cin.fail() || secondSide < 0 || secondSide >= 13000000)
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	bool answer = (firstSide == secontSide + thirdSide || secontSide == firstSide + thirdSide || thirdSide == firstSide + secontSide);
+			std::cout << "введено не корректное число, повторите ввод \n\n";
+		}
+		else
+		{
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			secondChecking = false;
+		}
+	}
+
+	std::cout << "введите значение третьей стороны треугольника не певышающее 13000000 " << std::endl;
+	bool thirdChecking{ true };
+	while (thirdChecking)
+	{
+		std::cin >> thirdSide;
+		if (std::cin.fail() || thirdSide < 0 || thirdSide >= 13000000)
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			std::cout << "введено не корректное число, повторите ввод \n\n";
+		}
+		else
+		{
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			thirdChecking = false;
+		}
+	}
+
+	double firstSideSqr  = firstSide  * firstSide;
+	double secontSideSqr = secondSide * secondSide;
+	double thirdSideSqr  = thirdSide  * thirdSide;
+
+	bool answer = (firstSideSqr == secontSideSqr + thirdSideSqr || secontSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secontSideSqr);
 
 	if (answer)
 	{
