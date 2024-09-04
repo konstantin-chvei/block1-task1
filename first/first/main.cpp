@@ -1,53 +1,41 @@
 #include <iostream>
 #include <limits>
 
-int getInt()
-{
-	int value{0};
-
-	static int sideNumber{ 0 };
-	sideNumber++;
-
-	while (true)
-	{
-		std::cout << "Введите длинну сороны номер " << sideNumber << std::endl;
-		std::cin >> value;
-		if (std::cin.fail())
-		{
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			std::cout << "введено не корректное число, повторите ввод \n\n";
-		}
-		else
-		{
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			break;
-		}
-	}
-	return value;
-}
-
 int main()
 {
 	std::setlocale(LC_ALL, "ru-RU");
-	int firstSide{ 0 }, secondSide{ 0 }, thirdSide{ 0 };
 
-	firstSide  = getInt();
-	secondSide = getInt();
-	thirdSide  = getInt();
+	const int countOfSides = 3;
+	int arrayOfSides[countOfSides]{ 0 };
 
-	int maxSide = firstSide;
+	for (int i{ 0 }; i < countOfSides; i++)
+	{
+		bool checking{ true };
+		while (checking)
+		{
+			std::cin >> arrayOfSides[i];
+			if (std::cin.fail())
+			{
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	if (secondSide > maxSide)
-		maxSide = secondSide;
+				std::cout << "введено не корректное число, повторите ввод \n\n";
+			}
+			else
+			{
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				checking = false;
+			}
+		}
+	}
 
-	if (thirdSide > maxSide)
-		maxSide = thirdSide;
+	int firstSide{ arrayOfSides[0] * arrayOfSides[0] };
+	int secontSide{ arrayOfSides[1] * arrayOfSides[1] };
+	int thirdSide{ arrayOfSides[2] * arrayOfSides[2] };
 
-	if ((maxSide * maxSide == firstSide * firstSide + secondSide * secondSide) ||
-		(maxSide * maxSide == firstSide * firstSide + thirdSide * thirdSide)   || 
-		(maxSide * maxSide == secondSide * secondSide + thirdSide * thirdSide))
+	bool answer = (firstSide == secontSide + thirdSide || secontSide == firstSide + thirdSide || thirdSide == firstSide + secontSide);
+
+	if (answer)
 	{
 		std::cout << "треугольник прямоугольный\n";
 	}
@@ -55,6 +43,4 @@ int main()
 	{
 		std::cout << "треугольник не прямоугольный\n";
 	}
-
-	return 0;
 }
