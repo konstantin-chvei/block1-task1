@@ -10,14 +10,14 @@ int getInt()
 
 	while (true)
 	{
-		std::cout << "Ââåäèòå äëèííó ñîğîíû íîìåğ " << sideNumber << std::endl;
+		std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ´Ğ»Ğ¸Ğ½Ğ½Ñƒ ÑĞ¾Ñ€Ğ¾Ğ½Ñ‹ Ğ½Ğ¾Ğ¼ĞµÑ€ " << sideNumber << std::endl;
 		std::cin >> value;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-			std::cout << "ââåäåíî íå êîğğåêòíîå ÷èñëî, ïîâòîğèòå ââîä \n\n";
+			std::cout << "Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½Ğµ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, Ğ¿Ğ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´ \n\n";
 		}
 		else
 		{
@@ -49,11 +49,11 @@ int main()
 		(maxSide * maxSide == firstSide * firstSide + thirdSide * thirdSide)   || 
 		(maxSide * maxSide == secondSide * secondSide + thirdSide * thirdSide))
 	{
-		std::cout << "òğåóãîëüíèê ïğÿìîóãîëüíûé\n";
+		std::cout << "Ñ‚Ñ€ĞµÑƒĞ³Ğ¾Ğ»ÑŒĞ½Ğ¸Ğº Ğ¿Ñ€ÑĞ¼Ğ¾ÑƒĞ³Ğ¾Ğ»ÑŒĞ½Ñ‹Ğ¹\n";
 	}
 	else
 	{
-		std::cout << "òğåóãîëüíèê íå ïğÿìîóãîëüíûé\n";
+		std::cout << "Ñ‚Ñ€ĞµÑƒĞ³Ğ¾Ğ»ÑŒĞ½Ğ¸Ğº Ğ½Ğµ Ğ¿Ñ€ÑĞ¼Ğ¾ÑƒĞ³Ğ¾Ğ»ÑŒĞ½Ñ‹Ğ¹\n";
 	}
 
 	return 0;
