@@ -5,9 +5,29 @@ int main()
 {
 	std::setlocale(LC_ALL, "ru-RU");
 
-	int firstSide{ 0 }, secondSide{ 0 }, thirdSide{ 0 };
+	int firstSide;
+	int secondSide;
+	int thirdSide;
+
+	bool firstChecking;
+	bool secondChecking;
+	bool thirdChecking;
+	bool answer;
+
+	double firstSideSqr;
+	double secontSideSqr;
+	double thirdSideSqr;
+
+	firstSide  = 0;
+	secondSide = 0;
+	thirdSide  = 0;
+
+	firstChecking  = true;
+	secondChecking = true;
+	thirdChecking  = true;
+
+
 	std::cout << "введите значение первой стороны треугольника не певышающее 13000000 " << std::endl;
-	bool firstChecking{ true };
 	while (firstChecking)
 	{
 		std::cin >> firstSide;
@@ -26,7 +46,6 @@ int main()
 	}
 
 	std::cout << "введите значение второй стороны треугольника не певышающее 13000000 " << std::endl;
-	bool secondChecking{ true };
 	while (secondChecking)
 	{
 		std::cin >> secondSide;
@@ -45,7 +64,6 @@ int main()
 	}
 
 	std::cout << "введите значение третьей стороны треугольника не певышающее 13000000 " << std::endl;
-	bool thirdChecking{ true };
 	while (thirdChecking)
 	{
 		std::cin >> thirdSide;
@@ -63,11 +81,11 @@ int main()
 		}
 	}
 
-	double firstSideSqr  = firstSide  * firstSide;
-	double secontSideSqr = secondSide * secondSide;
-	double thirdSideSqr  = thirdSide  * thirdSide;
+	firstSideSqr  = firstSide  * firstSide;
+	secontSideSqr = secondSide * secondSide;
+	thirdSideSqr  = thirdSide  * thirdSide;
 
-	bool answer = (firstSideSqr == secontSideSqr + thirdSideSqr || secontSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secontSideSqr);
+	answer = (firstSideSqr == secontSideSqr + thirdSideSqr || secontSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secontSideSqr);
 
 	if (answer)
 	{
