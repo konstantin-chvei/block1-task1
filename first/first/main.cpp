@@ -10,6 +10,7 @@ int main()
 
 	for (int i{ 0 }; i < countOfSides; i++)
 	{
+		std::cout << "введите сторону треугольника под номером " << i + 1 << std::endl;
 		bool checking{ true };
 		while (checking)
 		{
