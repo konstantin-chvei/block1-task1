@@ -10,9 +10,9 @@ int main()
 
 	bool isCorrect;
 
-	double firstSideSqr;
-	double secontSideSqr;
-	double thirdSideSqr;
+	long firstSideSqr;
+	long secontSideSqr;
+	long thirdSideSqr;
 
 	firstSide  = 0;
 	secondSide = 0;
@@ -22,11 +22,11 @@ int main()
 
 	std::cout << "Дано:\tДаны длины сторон треугольника \nЗадача:\tОпределить, является ли данный треугольник прямоугольным.\n\n";
 
-	std::cout << "Введите значение первой стороны треугольника не певышающее 13000000 " << std::endl;
+	std::cout << "Введите значение первой стороны треугольника не певышающее 1000000000 " << std::endl;
 	while (isCorrect)
 	{
 		std::cin >> firstSide;
-		if (std::cin.fail() || firstSide < 0 || firstSide > 13000001)
+		if (std::cin.fail() || firstSide < 0 || firstSide > 1000000001)
 		{
 			std::cin.clear();
 			std::cin.ignore(INT16_MAX, '\n');
@@ -37,9 +37,9 @@ int main()
 			{
 				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
 			}
-			else if (firstSide > 13000001)
+			else if (firstSide > 1000000001)
 			{
-				std::cout << "сторона не может превышать 13000000, повторите ввод\n";
+				std::cout << "сторона не может превышать 1000000000, повторите ввод\n";
 			}
 			else
 			{
@@ -56,11 +56,11 @@ int main()
 	
 	isCorrect = true;
 
-	std::cout << "Введите значение второй стороны треугольника не певышающее 13000000 " << std::endl;
+	std::cout << "Введите значение второй стороны треугольника не певышающее 1000000000 " << std::endl;
 	while (isCorrect)
 	{
 		std::cin >> secondSide;
-		if (std::cin.fail() || secondSide < 0 || secondSide >= 13000000)
+		if (std::cin.fail() || secondSide < 0 || secondSide > 1000000001)
 		{
 			std::cin.clear();
 			std::cin.ignore(INT16_MAX, '\n');
@@ -71,9 +71,9 @@ int main()
 			{
 				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
 			}
-			else if (secondSide > 13000001)
+			else if (secondSide > 1000000001)
 			{
-				std::cout << "сторона не может превышать 13000000, повторите ввод\n";
+				std::cout << "сторона не может превышать 1000000000, повторите ввод\n";
 			}
 			else
 			{
@@ -89,11 +89,11 @@ int main()
 
 	isCorrect = true;
 
-	std::cout << "Введите значение третьей стороны треугольника не певышающее 13000000 " << std::endl;
+	std::cout << "Введите значение третьей стороны треугольника не певышающее 1000000000 " << std::endl;
 	while (isCorrect)
 	{
 		std::cin >> thirdSide;
-		if (std::cin.fail() || thirdSide < 0 || thirdSide >= 13000000)
+		if (std::cin.fail() || thirdSide < 0 || thirdSide > 1000000001)
 		{
 			std::cin.clear();
 			std::cin.ignore(INT16_MAX, '\n');
@@ -104,9 +104,9 @@ int main()
 			{
 				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
 			}
-			else if (thirdSide > 13000001)
+			else if (thirdSide > 1000000001)
 			{
-				std::cout << "сторона не может превышать 13000000, повторите ввод\n";
+				std::cout << "сторона не может превышать 1000000000, повторите ввод\n";
 			}
 			else
 			{
