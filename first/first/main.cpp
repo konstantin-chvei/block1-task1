@@ -1,5 +1,4 @@
 #include <iostream>
-#include <limits>
 
 int main()
 {
@@ -9,10 +8,7 @@ int main()
 	int secondSide;
 	int thirdSide;
 
-	bool firstChecking;
-	bool secondChecking;
-	bool thirdChecking;
-	bool answer;
+	bool isCorrect;
 
 	double firstSideSqr;
 	double secontSideSqr;
@@ -22,62 +18,105 @@ int main()
 	secondSide = 0;
 	thirdSide  = 0;
 
-	firstChecking  = true;
-	secondChecking = true;
-	thirdChecking  = true;
+	isCorrect = true;
 
+	std::cout << "Дано:\tДаны длины сторон треугольника \nЗадача:\tОпределить, является ли данный треугольник прямоугольным.\n\n";
 
-	std::cout << "введите значение первой стороны треугольника не певышающее 13000000 " << std::endl;
-	while (firstChecking)
+	std::cout << "Введите значение первой стороны треугольника не певышающее 13000000 " << std::endl;
+	while (isCorrect)
 	{
 		std::cin >> firstSide;
-		if (std::cin.fail() || firstSide < 0 || firstSide >= 13000000)
+		if (std::cin.fail() || firstSide < 0 || firstSide > 13000001)
 		{
 			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.ignore(INT16_MAX, '\n');
 
-			std::cout << "введено не корректное число, повторите ввод \n\n";
+			std::cout << "Введено не корректное число: ";
+
+			if (firstSide < 0)
+			{
+				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
+			}
+			else if (firstSide > 13000001)
+			{
+				std::cout << "сторона не может превышать 13000000, повторите ввод\n";
+			}
+			else
+			{
+				std::cout << "сторона должна быть числом, повторите ввод\n";
+			}
+
 		}
 		else
 		{
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			firstChecking = false;
+			std::cin.ignore(INT16_MAX, '\n');
+			isCorrect = false;
 		}
 	}
+	
+	isCorrect = true;
 
-	std::cout << "введите значение второй стороны треугольника не певышающее 13000000 " << std::endl;
-	while (secondChecking)
+	std::cout << "Введите значение второй стороны треугольника не певышающее 13000000 " << std::endl;
+	while (isCorrect)
 	{
 		std::cin >> secondSide;
 		if (std::cin.fail() || secondSide < 0 || secondSide >= 13000000)
 		{
 			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.ignore(INT16_MAX, '\n');
 
-			std::cout << "введено не корректное число, повторите ввод \n\n";
+			std::cout << "Введено не корректное число: ";
+
+			if (secondSide < 0)
+			{
+				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
+			}
+			else if (secondSide > 13000001)
+			{
+				std::cout << "сторона не может превышать 13000000, повторите ввод\n";
+			}
+			else
+			{
+				std::cout << "сторона должна быть числом, повторите ввод\n";
+			}
 		}
 		else
 		{
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			secondChecking = false;
+			std::cin.ignore(INT16_MAX, '\n');
+			isCorrect = false;
 		}
 	}
 
-	std::cout << "введите значение третьей стороны треугольника не певышающее 13000000 " << std::endl;
-	while (thirdChecking)
+	isCorrect = true;
+
+	std::cout << "Введите значение третьей стороны треугольника не певышающее 13000000 " << std::endl;
+	while (isCorrect)
 	{
 		std::cin >> thirdSide;
 		if (std::cin.fail() || thirdSide < 0 || thirdSide >= 13000000)
 		{
 			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin.ignore(INT16_MAX, '\n');
 
-			std::cout << "введено не корректное число, повторите ввод \n\n";
+			std::cout << "Введено не корректное число ";
+
+			if (thirdSide < 0)
+			{
+				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
+			}
+			else if (thirdSide > 13000001)
+			{
+				std::cout << "сторона не может превышать 13000000, повторите ввод\n";
+			}
+			else
+			{
+				std::cout << "сторона должна быть числом, повторите ввод\n";
+			}
 		}
 		else
 		{
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			thirdChecking = false;
+			std::cin.ignore(INT16_MAX, '\n');
+			isCorrect = false;
 		}
 	}
 
@@ -85,14 +124,12 @@ int main()
 	secontSideSqr = secondSide * secondSide;
 	thirdSideSqr  = thirdSide  * thirdSide;
 
-	answer = (firstSideSqr == secontSideSqr + thirdSideSqr || secontSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secontSideSqr);
-
-	if (answer)
+	if (firstSideSqr == secontSideSqr + thirdSideSqr || secontSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secontSideSqr)
 	{
-		std::cout << "треугольник прямоугольный\n";
+		std::cout << "Треугольник прямоугольный\n";
 	}
 	else
 	{
-		std::cout << "треугольник не прямоугольный\n";
+		std::cout << "Треугольник не прямоугольный\n";
 	}
 }
