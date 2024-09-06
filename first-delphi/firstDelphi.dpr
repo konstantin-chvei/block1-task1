@@ -17,44 +17,44 @@ begin
 
     isCorrect := false;
     while(not isCorrect) do begin
-    writeln('Введите значение первой стороны треугольника не певышающее 1000000000 ');
+    writeln('Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРѕР№ СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РЅРµ РїРµРІС‹С€Р°СЋС‰РµРµ 1000000000 ');
     readln(input);
     isCorrect := TryStrToInt(input, firstSide);
 
     if(isCorrect and (firstSide > 1000000000)) then begin
-        writeln('Значение не должно превышать 1000000000, повторите ввод')
+        writeln('Р—РЅР°С‡РµРЅРёРµ РЅРµ РґРѕР»Р¶РЅРѕ РїСЂРµРІС‹С€Р°С‚СЊ 1000000000, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
     end;
 
     if(not isCorrect) then
-        writeln('сторона должна быть числом, повторите ввод')
+        writeln('СЃС‚РѕСЂРѕРЅР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РµР»С‹Рј С‡РёСЃР»РѕРј, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
     end;
 
     isCorrect := false;
     while(not isCorrect) do begin
-    writeln('Введите значение второй стороны треугольника не певышающее 1000000000 ');
+    writeln('Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РІС‚РѕСЂРѕР№ СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РЅРµ РїРµРІС‹С€Р°СЋС‰РµРµ 1000000000 ');
     readln(input);
     isCorrect := TryStrToInt(input, secondSide);
 
     if(isCorrect and (secondSide > 1000000000)) then begin
-        writeln('Значение не должно превышать 1000000000, повторите ввод')
+        writeln('Р—РЅР°С‡РµРЅРёРµ РЅРµ РґРѕР»Р¶РЅРѕ РїСЂРµРІС‹С€Р°С‚СЊ 1000000000, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
     end;
 
     if(not isCorrect) then
-        writeln('сторона должна быть числом, повторите ввод')
+        writeln('СЃС‚РѕСЂРѕРЅР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РµР»С‹Рј С‡РёСЃР»РѕРј, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
     end;
 
     isCorrect := false;
     while(not isCorrect) do begin
-    writeln('Введите значение третьей стороны треугольника не певышающее 1000000000 ');
+    writeln('Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ С‚СЂРµС‚СЊРµР№ СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РЅРµ РїРµРІС‹С€Р°СЋС‰РµРµ 1000000000 ');
     readln(input);
     isCorrect := TryStrToInt(input, thirdSide);
 
     if(isCorrect and (thirdSide > 1000000000)) then begin
-        writeln('Значение не должно превышать 1000000000, повторите ввод')
+        writeln('Р—РЅР°С‡РµРЅРёРµ РЅРµ РґРѕР»Р¶РЅРѕ РїСЂРµРІС‹С€Р°С‚СЊ 1000000000, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
     end;
 
     if(not isCorrect) then
-        writeln('сторона должна быть числом, повторите ввод')
+        writeln('СЃС‚РѕСЂРѕРЅР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РµР»С‹Рј С‡РёСЃР»РѕРј, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
     end;
 
     firstSideSqr  := firstSide  * firstSide;
@@ -64,8 +64,8 @@ begin
     if((firstSideSqr = secondSideSqr + thirdSideSqr) or
     (secondSideSqr = firstSideSqr + thirdSideSqr)    or
     (thirdSideSqr = firstSideSqr + secondSideSqr))   then
-    writeln('Треугольник прямоугольный') else
-    writeln('Треугольник не прямоугольный');
+    writeln('РўСЂРµСѓРіРѕР»СЊРЅРёРє РїСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№') else
+    writeln('РўСЂРµСѓРіРѕР»СЊРЅРёРє РЅРµ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№');
 
     readln;
 end.
