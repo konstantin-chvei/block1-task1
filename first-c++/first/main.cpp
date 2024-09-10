@@ -47,7 +47,8 @@ int main()
 			}
 
 		}
-		else if (std::cin.peek() != '\n') {
+		else if (std::cin.peek() != '\n') 
+		{
 			std::cout << "Введено некорректное число, повторите попытку\n";
 			std::cin.ignore(INT_MAX, '\n');
 		}
@@ -84,7 +85,8 @@ int main()
 				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
 		}
-		else if (std::cin.peek() != '\n') {
+		else if (std::cin.peek() != '\n') 
+		{
 			std::cout << "Введено некорректное число, повторите попытку\n";
 			std::cin.ignore(INT_MAX, '\n');
 		}
@@ -121,7 +123,8 @@ int main()
 				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
 		}
-		else if (std::cin.peek() != '\n') {
+		else if (std::cin.peek() != '\n') 
+		{
 			std::cout << "Введено некорректное число, повторите попытку\n";
 			std::cin.ignore(INT_MAX, '\n');
 		}
