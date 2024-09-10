@@ -28,7 +28,7 @@ public class Main {
         System.out.println("Введите значение первой стороны не певышающее 1000000000: ");
         while (!isCorrect) {
             if (scanner.hasNextInt()) {
-                int value = scanner.nextInt();
+                value = scanner.nextInt();
                 if (value < 0 ) {
                     isCorrect = false;
                     System.out.println("сторона не может быть отрицательной, повторите ввод");
@@ -52,7 +52,7 @@ public class Main {
         System.out.println("Введите значение второй стороны не певышающее 1000000000:");
         while (!isCorrect) {
             if (scanner.hasNextInt()) {
-                int value = scanner.nextInt();
+                value = scanner.nextInt();
                 if (value < 0 ) {
                     isCorrect = false;
                     System.out.println("сторона не может быть отрицательной, повторите ввод");
