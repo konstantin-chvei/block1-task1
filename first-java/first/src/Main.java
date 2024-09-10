@@ -37,11 +37,11 @@ public class Main {
                     isCorrect = false;
                     System.out.println("сторона не может превышать 1000000000, повторите ввод");
                     scanner.next();
-                }else {
+                } else {
                     firstSide = value;
                     isCorrect = true;
                 }
-            }else {
+            } else {
                 isCorrect = false;
                 System.out.println("сторона не может превышать 1000000000 или не являться целым числом, повторите ввод");
                 scanner.next();
@@ -61,11 +61,11 @@ public class Main {
                     isCorrect = false;
                     System.out.println("сторона не может превышать 1000000000, повторите ввод");
                     scanner.next();
-                }else {
+                } else {
                     secondSide = value;
                     isCorrect = true;
                 }
-            }else {
+            } else {
                 isCorrect = false;
                 System.out.println("сторона не может превышать 1000000000 или не являться целым числом, повторите ввод");
                 scanner.next();
@@ -85,11 +85,11 @@ public class Main {
                     isCorrect = false;
                     System.out.println("сторона не может превышать 1000000000, повторите ввод");
                     scanner.next();
-                }else {
+                } else {
                     thirdSide = value;
                     isCorrect = true;
                 }
-            }else {
+            } else {
                 isCorrect = false;
                 System.out.println("сторона не может превышать 1000000000 или не являться целым числом, повторите ввод");
                 scanner.next();
@@ -101,10 +101,9 @@ public class Main {
         secondSideSqr = secondSide * secondSide;
         thirdSideSqr  = thirdSide * thirdSide;
 
-        if ((firstSideSqr == secondSideSqr + thirdSideSqr) | (secondSideSqr == thirdSideSqr + firstSideSqr) | (thirdSideSqr == firstSideSqr + secondSideSqr))
-        {
+        if ((firstSideSqr == secondSideSqr + thirdSideSqr) | (secondSideSqr == thirdSideSqr + firstSideSqr) | (thirdSideSqr == firstSideSqr + secondSideSqr)){
             System.out.println("треугольник прямоугольный");
-        }else {
+        } else {
             System.out.println("треугольник не прямоугольный");
         }
     }
