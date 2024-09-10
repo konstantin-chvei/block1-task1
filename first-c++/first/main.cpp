@@ -14,9 +14,9 @@ int main()
 	long secondSideSqr;
 	long thirdSideSqr;
 
-	firstSide  = 0;
+	firstSide = 0;
 	secondSide = 0;
-	thirdSide  = 0;
+	thirdSide = 0;
 
 	isCorrect = true;
 
@@ -43,9 +43,13 @@ int main()
 			}
 			else
 			{
-				std::cout << "сторона должна быть целым числом, повторите ввод\n";
+				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
 
+		}
+		else if (std::cin.peek() != '\n') {
+			std::cout << "Введено некорректное число, повторите попытку\n";
+			std::cin.ignore(INT_MAX, '\n');
 		}
 		else
 		{
@@ -53,7 +57,7 @@ int main()
 			isCorrect = false;
 		}
 	}
-	
+
 	isCorrect = true;
 
 	std::cout << "Введите значение второй стороны треугольника не певышающее 1000000000 " << std::endl;
@@ -77,8 +81,12 @@ int main()
 			}
 			else
 			{
-				std::cout << "сторона должна быть целым числом, повторите ввод\n";
+				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
+		}
+		else if (std::cin.peek() != '\n') {
+			std::cout << "Введено некорректное число, повторите попытку\n";
+			std::cin.ignore(INT_MAX, '\n');
 		}
 		else
 		{
@@ -110,8 +118,12 @@ int main()
 			}
 			else
 			{
-				std::cout << "сторона должна быть целым числом, повторите ввод\n";
+				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
+		}
+		else if (std::cin.peek() != '\n') {
+			std::cout << "Введено некорректное число, повторите попытку\n";
+			std::cin.ignore(INT_MAX, '\n');
 		}
 		else
 		{
@@ -120,9 +132,9 @@ int main()
 		}
 	}
 
-	firstSideSqr  = firstSide  * firstSide;
+	firstSideSqr = firstSide * firstSide;
 	secondSideSqr = secondSide * secondSide;
-	thirdSideSqr  = thirdSide  * thirdSide;
+	thirdSideSqr = thirdSide * thirdSide;
 
 	if (firstSideSqr == secondSideSqr + thirdSideSqr || secondSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secondSideSqr)
 	{
@@ -132,6 +144,4 @@ int main()
 	{
 		std::cout << "Треугольник не прямоугольный\n";
 	}
-	
-	system("pause");
 }
