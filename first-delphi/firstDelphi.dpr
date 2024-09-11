@@ -14,7 +14,8 @@ Var
     FirstSideSqr, SecondSideSqr, ThirdSideSqr:Int64;
 
 Begin
-
+    Writeln('Дано:   Даны длины сторон треугольника.');
+    Writeln('Задача: Определить, является ли данный треугольник прямоугольным.');
     IsCorrect := False;
     While Not IsCorrect Do
     Begin
