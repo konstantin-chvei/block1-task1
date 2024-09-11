@@ -35,7 +35,7 @@ int main()
 
 			if (firstSide < 0)
 			{
-				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
+				std::cout << "сторона не может быть отрицательной, повторите ввод\n";
 			}
 			else if (firstSide > 1000000001)
 			{
@@ -47,8 +47,7 @@ int main()
 			}
 
 		}
-		else if (std::cin.peek() != '\n') 
-		{
+		else if (std::cin.peek() != '\n') {
 			std::cout << "Введено некорректное число, повторите попытку\n";
 			std::cin.ignore(INT_MAX, '\n');
 		}
@@ -74,7 +73,7 @@ int main()
 
 			if (secondSide < 0)
 			{
-				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
+				std::cout << "сторона не может быть отрицательной, повторите ввод\n";
 			}
 			else if (secondSide > 1000000001)
 			{
@@ -85,8 +84,7 @@ int main()
 				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
 		}
-		else if (std::cin.peek() != '\n') 
-		{
+		else if (std::cin.peek() != '\n') {
 			std::cout << "Введено некорректное число, повторите попытку\n";
 			std::cin.ignore(INT_MAX, '\n');
 		}
@@ -112,7 +110,7 @@ int main()
 
 			if (thirdSide < 0)
 			{
-				std::cout << "сторона не может быть отрицательной или равной нулю, повторите ввод\n";
+				std::cout << "сторона не может быть отрицательной, повторите ввод\n";
 			}
 			else if (thirdSide > 1000000001)
 			{
@@ -123,8 +121,7 @@ int main()
 				std::cout << "сторона должна быть числом, повторите ввод\n";
 			}
 		}
-		else if (std::cin.peek() != '\n') 
-		{
+		else if (std::cin.peek() != '\n') {
 			std::cout << "Введено некорректное число, повторите попытку\n";
 			std::cin.ignore(INT_MAX, '\n');
 		}
@@ -139,12 +136,22 @@ int main()
 	secondSideSqr = secondSide * secondSide;
 	thirdSideSqr = thirdSide * thirdSide;
 
-	if (firstSideSqr == secondSideSqr + thirdSideSqr || secondSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secondSideSqr)
+	if (firstSide < (secondSide + thirdSide) && secondSide < (firstSide + thirdSide) && thirdSide < (secondSide + firstSide) && (firstSide != 0 && secondSide != 0 && thirdSide != 0))
 	{
-		std::cout << "Треугольник прямоугольный\n";
+		if (firstSideSqr == secondSideSqr + thirdSideSqr || secondSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secondSideSqr)
+		{
+			std::cout << "Треугольник прямоугольный\n";
+		}
+		else
+		{
+			std::cout << "Треугольник не прямоугольный\n";
+		}
 	}
 	else
 	{
-		std::cout << "Треугольник не прямоугольный\n";
+		std::cout << "Треугольник не существует\n";
 	}
+
+	std::cout << "Нажмите любую клавишу, чтобы закрыть это окно:\n";
+	std::cin.get();
 }
