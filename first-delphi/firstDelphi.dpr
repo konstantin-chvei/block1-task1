@@ -82,7 +82,7 @@ Begin
     SecondSideSqr := SecondSide * SecondSide;
     ThirdSideSqr  := ThirdSide  * ThirdSide;
 
-    If ((FirstSide < (SecondSide + ThirdSide)) Or (SecondSide < (FirstSide + ThirdSide)) Or (ThirdSide < (FirstSide + SecondSide))) And ((Not (FirstSide = 0)) Or (Not (SecondSide = 0)) Or (Not (ThirdSide = 0))) Then
+    If ((FirstSide < (SecondSide + ThirdSide)) And (SecondSide < (FirstSide + ThirdSide)) And (ThirdSide < (FirstSide + SecondSide))) And ((Not (FirstSide = 0)) And (Not (SecondSide = 0)) And (Not (ThirdSide = 0))) Then
     Begin
         If (FirstSideSqr = SecondSideSqr + ThirdSideSqr) Or (SecondSideSqr = FirstSideSqr + ThirdSideSqr) Or (ThirdSideSqr = FirstSideSqr + SecondSideSqr) Then
             Writeln('Треугольник прямоугольный')
