@@ -31,7 +31,8 @@ int main()
 		if (std::cin.fail() || firstSide < 0 || firstSide > upperLimitOfInput)
 		{
 			std::cin.clear();
-			std::cin.ignore(INT16_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 
 			std::cout << "Введено не корректное число: ";
 
@@ -51,11 +52,13 @@ int main()
 		}
 		else if (std::cin.peek() != '\n') {
 			std::cout << "Введено некорректное число, повторите попытку\n";
-			std::cin.ignore(INT_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 		}
 		else
 		{
-			std::cin.ignore(INT16_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 			isCorrect = false;
 		}
 	}
@@ -69,7 +72,8 @@ int main()
 		if (std::cin.fail() || secondSide < 0 || secondSide > upperLimitOfInput)
 		{
 			std::cin.clear();
-			std::cin.ignore(INT16_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 
 			std::cout << "Введено не корректное число: ";
 
@@ -88,11 +92,13 @@ int main()
 		}
 		else if (std::cin.peek() != '\n') {
 			std::cout << "Введено некорректное число, повторите попытку\n";
-			std::cin.ignore(INT_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 		}
 		else
 		{
-			std::cin.ignore(INT16_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 			isCorrect = false;
 		}
 	}
@@ -106,7 +112,8 @@ int main()
 		if (std::cin.fail() || thirdSide < 0 || thirdSide > upperLimitOfInput)
 		{
 			std::cin.clear();
-			std::cin.ignore(INT16_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 
 			std::cout << "Введено не корректное число ";
 
@@ -125,11 +132,13 @@ int main()
 		}
 		else if (std::cin.peek() != '\n') {
 			std::cout << "Введено некорректное число, повторите попытку\n";
-			std::cin.ignore(INT_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 		}
 		else
 		{
-			std::cin.ignore(INT16_MAX, '\n');
+			while (std::cin.peek() != '\n')
+				std::cin.ignore();
 			isCorrect = false;
 		}
 	}
