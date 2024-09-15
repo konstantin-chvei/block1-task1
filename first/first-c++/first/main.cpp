@@ -8,22 +8,16 @@ int main()
 	int secondSide;
 	int thirdSide;
 	int upperLimitOfInput;
-
 	bool isCorrect;
-
 	long firstSideSqr;
 	long secondSideSqr;
 	long thirdSideSqr;
-
 	firstSide = 0;
 	secondSide = 0;
 	thirdSide = 0;
 	upperLimitOfInput = 1000000000;
-
 	isCorrect = true;
-
 	std::cout << "Дано:\tДаны длины сторон треугольника \nЗадача:\tОпределить, является ли данный треугольник прямоугольным.\n\n";
-
 	std::cout << "Введите значение первой стороны треугольника не певышающее 1000000000 " << std::endl;
 	while (isCorrect)
 	{
@@ -62,9 +56,7 @@ int main()
 			isCorrect = false;
 		}
 	}
-
 	isCorrect = true;
-
 	std::cout << "Введите значение второй стороны треугольника не певышающее 1000000000 " << std::endl;
 	while (isCorrect)
 	{
@@ -102,9 +94,7 @@ int main()
 			isCorrect = false;
 		}
 	}
-
 	isCorrect = true;
-
 	std::cout << "Введите значение третьей стороны треугольника не певышающее 1000000000 " << std::endl;
 	while (isCorrect)
 	{
@@ -142,11 +132,9 @@ int main()
 			isCorrect = false;
 		}
 	}
-
 	firstSideSqr = firstSide * firstSide;
 	secondSideSqr = secondSide * secondSide;
 	thirdSideSqr = thirdSide * thirdSide;
-
 	if (firstSide < (secondSide + thirdSide) && secondSide < (firstSide + thirdSide) && thirdSide < (secondSide + firstSide) && (firstSide != 0 && secondSide != 0 && thirdSide != 0))
 	{
 		if (firstSideSqr == secondSideSqr + thirdSideSqr || secondSideSqr == firstSideSqr + thirdSideSqr || thirdSideSqr == firstSideSqr + secondSideSqr)
