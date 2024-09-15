@@ -7,15 +7,14 @@ int main()
 	int firstSide;
 	int secondSide;
 	int thirdSide;
-	int upperLimitOfInput;
 	bool isCorrect;
 	long firstSideSqr;
 	long secondSideSqr;
 	long thirdSideSqr;
+	const int upperLimitOfInput = 1000000000;
 	firstSide = 0;
 	secondSide = 0;
 	thirdSide = 0;
-	upperLimitOfInput = 1000000000;
 	isCorrect = true;
 	std::cout << "Дано:\tДаны длины сторон треугольника \nЗадача:\tОпределить, является ли данный треугольник прямоугольным.\n\n";
 	std::cout << "Введите значение первой стороны треугольника не певышающее 1000000000 " << std::endl;
