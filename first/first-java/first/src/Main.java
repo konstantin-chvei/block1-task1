@@ -7,28 +7,21 @@ public class Main {
         int secondSide;
         int thirdSide;
         int upperLimitOfInput;
-
         int value;
-
         int firstSideSqr;
         int secondSideSqr;
         int thirdSideSqr;
-
         boolean isCorrect;
-
         firstSide = 0;
         secondSide = 0;
         thirdSide = 0;
         value = 0;
         upperLimitOfInput = 1000000000;
-
         firstSideSqr = 0;
         secondSideSqr = 0;
         thirdSideSqr = 0;
-
         isCorrect = false;
         System.out.println("Дано:\tДаны длины сторон треугольника \nЗадача:\tОпределить, является ли данный треугольник прямоугольным.\n\n");
-
         System.out.println("Введите значение первой стороны не певышающее 1000000000: ");
         while (!isCorrect) {
             if (scanner.hasNextInt()) {
@@ -51,7 +44,6 @@ public class Main {
                 scanner.next();
             }
         }
-
         isCorrect = false;
         System.out.println("Введите значение второй стороны не певышающее 1000000000:");
         while (!isCorrect) {
@@ -75,7 +67,6 @@ public class Main {
                 scanner.next();
             }
         }
-
         isCorrect = false;
         System.out.println("Введите значение третьей стороны не певышающее 1000000000:");
         while (!isCorrect) {
@@ -100,11 +91,9 @@ public class Main {
             }
         }
         scanner.close();
-
         firstSideSqr = firstSide * firstSide;
         secondSideSqr = secondSide * secondSide;
         thirdSideSqr = thirdSide * thirdSide;
-
         if (firstSide < (secondSide + thirdSide) && secondSide < (firstSide + thirdSide) && thirdSide < (secondSide + firstSide) && (firstSide != 0 && secondSide != 0 && thirdSide != 0)) {
             if ((firstSideSqr == secondSideSqr + thirdSideSqr) | (secondSideSqr == thirdSideSqr + firstSideSqr) | (thirdSideSqr == firstSideSqr + secondSideSqr)) {
                 System.out.println("треугольник прямоугольный");
