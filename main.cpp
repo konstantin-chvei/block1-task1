@@ -124,7 +124,7 @@ void main()
 	}
 	for (int i = 2; i < n + 1; i++)
 	{
-		if ((arrayOfTowers[i][1] - arrayOfTowers[indexOfHigher][1]) >=
+		if ((arrayOfTowers[i][1] - arrayOfTowers[indexOfHigher][1]) >
 			((arrayOfTowers[i][0] - arrayOfTowers[firstTower][0]) *
 				(arrayOfTowers[indexOfHigher][1] - arrayOfTowers[firstTower][1])) /
 			(arrayOfTowers[indexOfHigher][0] - arrayOfTowers[firstTower][0]))
