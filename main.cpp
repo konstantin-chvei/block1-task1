@@ -14,7 +14,7 @@ void main()
 	int countOfTowers = 1;
 	int indexOfHigher = 1;
 	int firstTower = 0;
-	float arrayOfTowers[10][2];
+	float arrayOfTowers[21][2];
 	bool isCorrect;
 	isCorrect = false;
 	h = 0;
