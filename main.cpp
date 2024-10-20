@@ -11,9 +11,9 @@ void main()
 	const int LOVER_LIMIT_H = 0;
 	const int UPPER_LIMIT_X = 10000;
 	const int LOVER_LIMIT_X = 0;
+	const int firstTower = 0;
 	int countOfTowers = 1;
 	int indexOfHigher = 1;
-	int firstTower = 0;
 	float arrayOfTowers[21][2];
 	bool isCorrect;
 	isCorrect = false;
